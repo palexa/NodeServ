@@ -1,8 +1,12 @@
-var user=require("./user");
+var db=require('db');
+db.connect();
+var log=require("logger")(module);
+var User=require("./user");
 function run() {
-    var vasya=new user.User("vasia");
-    var petya=new user.User("petya");
+    var vasya=new User("vasia");
+    var petya=new User("petya");
     vasya.hello(petya);
+    log(db.getPhrase("Succesful"));
 }
 
 

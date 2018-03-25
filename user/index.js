@@ -1,11 +1,14 @@
-var phrases=require('./ru');
+var db=require('../node_modules/db');
+
+var log=require("logger")(module);
 function User(name) {
     this.name=name;
 }
 User.prototype.hello=function (who) {
-    console.log(phrases.Hello+' '+who.name);
+    log(db.getPhrase("Hello")+' '+who.name);
 };
 console.log("Required");
-exports.User=User;
+module.exports=User;
+//exports.User=User;
 //global.User=User;
 //console.log(module);
