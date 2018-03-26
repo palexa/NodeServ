@@ -1,18 +1,13 @@
-var db=require('db');
-db.connect();
-var log=require("logger")(module);
-var User=require("./user");
-function run() {
-    var vasya=new User("vasia");
-    var petya=new User("petya");
-    vasya.hello(petya);
-    log(db.getPhrase("Succesful"));
-}
+// var util =require('util');
+// var obj={
+//     a:4,
+//     b:4,
+//     inspect:function () {
+//         return 123;
+//     }
+// };
+// obj.self=obj;
+// console.log(util.inspect(obj));
 
-
-if(module.parent){
-    exports.run=run;
-}
-else {
-    run();
-}
+console.log("Log");
+console.error("error");
