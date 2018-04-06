@@ -1,0 +1,214 @@
+<html lang="en"><!--для русского надо указать ru к этому тегу или абзацу текста-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#" />
+    <title>Start</title>
+    <style>html {
+        font-size: 62.5%;
+        font-family: serif;
+    }
+    body {
+        font-size: 1.8rem;
+        line-height: 1.618;
+        max-width: 38em;
+        margin: auto;
+        color: #4a4a4a;
+        background-color: #f9f9f9;
+        padding: 13px;
+    }
+    @media (max-width: 684px) {
+        body {
+            font-size: 1.53rem;
+        }
+    }
+    @media (max-width: 382px) {
+        body {
+            font-size: 1.35rem;
+        }
+    }
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.1;
+        font-family: Verdana, Geneva, sans-serif;
+        font-weight: 700;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    h1 {
+        font-size: 2.35em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.75em;
+    }
+    h4 {
+        font-size: 1.5em;
+
+    }
+    h5 {
+        font-size: 1.25em;
+    }
+    h6 {
+        font-size: 1em;
+        margin: 2vh;
+    }
+
+    /* RESET LAYOUT AND ADD COLORS */
+    body {
+        margin: 0;
+        padding: 0;
+        max-width: inherit;
+        background: #fff;
+        color: #4a4a4a;
+    }
+    header, footer {
+        font-size: large;
+        text-align: center;
+        padding: 0 0;
+        background-color: #4a4a4a;
+        color: #f9f9f9;
+    }
+    nav {
+        background: #eee;
+    }
+    main {
+        background: #f9f9f9;
+    }
+    aside {
+        background: #eee;
+    }
+
+    /* GRID-BASED LAYOUT */
+    body {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 200px 1fr 150px;
+        grid-template-rows: min-content 1fr min-content;
+    }
+    nav,main,aside{
+        overflow: hidden;
+    }
+    header {
+        grid-row: 1;
+        grid-column: 1 / 4;
+
+
+    }
+    nav {
+        grid-row: 4;
+        grid-column: 1 / 2;
+        padding: 0 10px;
+    }
+    main {
+        grid-row: 2;
+        grid-column: 1 / 4;
+        padding: 0 20px;
+        height: 85vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    aside {
+        grid-row: 3;
+        grid-column: 1 / 4;
+        padding: 0 10px;
+
+    }
+    footer {
+        grid-row: 5;
+        grid-column: 1 / 4;
+    }
+    #menu-container {
+        display: flex;
+        flex-direction: row;
+        padding-right: 10vw;
+        padding-left: 10vw;
+        justify-content: space-between;
+        background: linear-gradient(to right, #2a85a0, #32bc39);
+
+    }
+    #contact-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #container {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        padding-right: 9vw;
+        padding-left: 9vw;
+        justify-content: space-between;
+        background: linear-gradient(to right, #32bc39, #2a85a0);
+    }
+    .menu-item{
+        border-bottom: green solid;
+    }
+    #logo{
+        padding-top: 1vh;
+        width: 50%;
+    }
+    #container-bottom{
+        color: #32bc39;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+    }
+    #menu-item_border{
+        border-bottom: white solid;
+        cursor: pointer;
+    }
+
+    </style>
+</head>
+<body >
+<header>
+    <div id="container">
+        <div><h3>Second</h3></div>
+        <div id="contact-container">
+            <div style="padding-right: 3vw; color: black"><h3>Our location</h3></div>
+            <div style="padding-left: 3vw;  color: black"><h3>+3756456523</h3></div>
+        </div>
+    </div>
+    <div id="menu-container">
+        <div class="menu-item Home"><h6>Home</h6></div>
+        <div class="menu-item About"><h6>About us</h6></div>
+        <div class="menu-item Services"><h6>Services</h6></div>
+        <div class="menu-item Team"><h6>Our team</h6></div>
+        <div class="menu-item Departments"><h6>Departments</h6></div>
+        <div class="menu-item"><h6>Gallery</h6></div>
+        <div class="menu-item"><h6>Blog</h6></div>
+        <div class="menu-item"><h6>Contact</h6></div>
+    </div>
+</header>
+<main id="main">
+    <div id="container-bottom">
+        <div id="one" style="text-align: center;" class="down"><h4>One</h4></div>
+        <div id="two" style="text-align: center;" class="down"><h4>Two</h4></div>
+        <div id="three" ><div style="background: #2a85a0; text-align: center;" class="down">View our services</div></div>
+    </div>
+</main>
+<nav>
+    <h4>Navigation</h4>
+    <p lang="ru">Чтобы разобраться в присущей сложности CSS, созданы самые разные виды
+        передовых практик. Проблема в том, что до сих пор нет единого мнения, какие из них
+        являются лучшими, а многие из них полностью противоречат друг другу.
+    </p>
+
+</nav>
+<aside>
+    <h4>Aside</h4>
+    <p lang="ru">Цель этой статьи — показать исторический контекст, как развивались техники и инструменты CSS до их нынешнего состояния в 2018 году.
+    </p>
+</aside>
+<footer>The footer</footer>
+</body>
+</html>
