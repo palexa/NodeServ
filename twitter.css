@@ -60,6 +60,7 @@ footer{
     align-items: center;
 }
 .Information-item{
+    display: flex;
     font-family: "Segoe UI",Arial,sans-serif;
     font-size: 18px;
     font-weight: bold;
@@ -83,6 +84,8 @@ footer{
     font-style: normal;
     text-align: center;
     font-family: "Material";
+    vertical-align: baseline;
+    position: relative;
 }
 
 .people::before{
