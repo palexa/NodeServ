@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Material';
+    src: url('./Fonts/edge-icons-Regular.ttf');
+}
+
 body{
     display: grid;
     min-height: 100vh;
@@ -68,9 +73,26 @@ footer{
     font-size: 12px;
     font-family: "Segoe UI",Arial,sans-serif;
 }
-.Information_Text{
 
+
+.icon{
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 35px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    font-family: "Material";
 }
-span::before{
-    content: url("./favicon.ico");
+
+.people::before{
+    content: "\f178";
+}
+
+.search::before{
+    content: "\f058";
+}
+
+.comment::before{
+    content: "\f151";
 }
