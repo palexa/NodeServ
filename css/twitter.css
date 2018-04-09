@@ -10,6 +10,7 @@ body{
     overflow-y: scroll;
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-rows: 1fr 8vh;
+    font-family: "Segoe UI",Arial,sans-serif;
 }
 ul{
     margin: 0 auto;
@@ -46,11 +47,24 @@ footer{
     border-top: 1px solid #e6ecf0;
 
 }
-.Registration{
+.Entrance{
     grid-row: 1;
     grid-column: 2;
     background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /*justify-content: center;*/
+    position: relative;
 }
+.Entrance_Login{
+    margin-top: 20px;
+/*padding-top: 20px;*/
+}
+.Entrance_Registration{
+
+}
+
 .Information{
     grid-row: 1;
     grid-column: 1 ;
@@ -98,4 +112,32 @@ footer{
 }
 .comment::before{
     content: "\f151";
+}
+.button{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border-radius: 100px;
+    background: white;
+    color: #41b5f4;
+    user-select: none;
+    border: 1px #41b5f4 solid;
+    align-content: center;
+}
+.button:hover {
+    background: rgba(103, 190, 234,0.3);
+    cursor: pointer;
+}
+.button:active {
+    text-align: center;
+    border: 1px solid #41b5f4;
+    box-shadow:
+            0 0 0 2px white,
+            0 0 0 4px #41b5f4;
+    background: #4283c7;
+    color: white;
 }

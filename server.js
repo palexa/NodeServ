@@ -4,7 +4,6 @@ var fs = require('fs');
 
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true);
-
     if(q.pathname.substr(-4,4)=='html'){
         var filename = "./Pages/" + q.pathname;
     }
@@ -18,7 +17,12 @@ http.createServer(function (req, res) {
             });
             return res.end("404 Not Found");
         }
-        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.writeHead(200, {
+            'Content-Type': 'text/html',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0'
+        });
         res.write(data);
         return res.end();
     });
