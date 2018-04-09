@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Material';
-    src: url('./Fonts/edge-icons-Regular.ttf');
+    font-family: 'MaterialDesign';
+    src: url('../Fonts/edge-icons-Regular.ttf');
 }
 
 body{
@@ -31,6 +31,9 @@ a{
     font-family: "Segoe UI",Arial,sans-serif;
     text-decoration: none;
 }
+a:hover {
+     text-decoration: underline;
+ }
 footer{
     line-height: 20px;
     display: flex;
@@ -83,19 +86,16 @@ footer{
     font-weight: normal;
     font-style: normal;
     text-align: center;
-    font-family: "Material";
+    font-family: "MaterialDesign";
     vertical-align: baseline;
     position: relative;
 }
-
 .people::before{
     content: "\f178";
 }
-
 .search::before{
     content: "\f058";
 }
-
 .comment::before{
     content: "\f151";
 }
