@@ -11,6 +11,7 @@ body{
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-rows: 1fr 8vh;
     font-family: "Segoe UI",Arial,sans-serif;
+
 }
 ul{
     margin: 0 auto;
@@ -33,7 +34,7 @@ a{
     text-decoration: none;
 }
 a:hover {
-     text-decoration: underline;
+    text-decoration: underline;
  }
 footer{
     line-height: 20px;
@@ -54,12 +55,10 @@ footer{
     display: flex;
     align-items: center;
     flex-direction: column;
-    /*justify-content: center;*/
     position: relative;
 }
 .Entrance_Login{
     margin-top: 20px;
-/*padding-top: 20px;*/
 }
 .Entrance_Registration{
 
@@ -114,23 +113,23 @@ footer{
     content: "\f151";
 }
 .button{
+    height: 100%;
     display: inline-block;
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
+    line-height: 20px;
+    padding: 12px;
+    font-size: 14px;
     text-align: center;
-    text-decoration: none;
     outline: none;
     border-radius: 100px;
     background: white;
     color: #41b5f4;
-    user-select: none;
     border: 1px #41b5f4 solid;
     align-content: center;
 }
 .button:hover {
     background: rgba(103, 190, 234,0.3);
     cursor: pointer;
+    transition: background .5s;
 }
 .button:active {
     text-align: center;
@@ -140,4 +139,32 @@ footer{
             0 0 0 4px #41b5f4;
     background: #4283c7;
     color: white;
+    transition: background .7s;
 }
+form{
+    display: flex;
+}
+.input{
+    width: 100%;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 12px;
+    border: #e6ecf0 1px solid;
+    border-radius: 5px;
+    background: #f9f8ac;
+}
+.input:focus {
+    border-radius: 5px;
+    color: #000000;
+    outline:none;
+    border: 1px solid #000000
+}
+.inputDiv{
+    width: 210px;
+    margin-right: 12px;
+}
+.forgot{
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
