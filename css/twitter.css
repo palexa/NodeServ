@@ -56,9 +56,11 @@ footer{
     align-items: center;
     flex-direction: column;
     position: relative;
+    justify-content: center;
 }
 .Entrance_Login{
-    margin-top: 20px;
+    top:20px;
+position: absolute;
 }
 .Entrance_Registration{
 
@@ -67,13 +69,23 @@ footer{
 .Information{
     grid-row: 1;
     grid-column: 1 ;
-    background: #41b5f4;
+    background-color: #1da1f2;
+    background-image: url("../img/Twitter.svg");
+    background-size: 170vh;
+    background-position-y: -20vh;
+    background-position-x: 2vw;
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-content: stretch;
     align-items: center;
+}
+.Twitter-bird{
+    height: 140vh;
+    right: -80vh;
+    top: -20vh;
 }
 .Information-item{
     display: flex;
@@ -113,6 +125,7 @@ footer{
     content: "\f151";
 }
 .button{
+    margin-top: 12px;
     height: 100%;
     display: inline-block;
     line-height: 20px;
@@ -146,18 +159,19 @@ form{
 }
 .input{
     width: 100%;
+    margin-top: 12px;
     line-height: 20px;
     font-size: 14px;
     padding: 12px;
     border: #e6ecf0 1px solid;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #f9f8ac;
 }
 .input:focus {
     border-radius: 5px;
     color: #000000;
     outline:none;
-    border: 1px solid #000000
+    border: 1px solid green;
 }
 .inputDiv{
     width: 210px;
