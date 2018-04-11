@@ -4,6 +4,7 @@ var fs = require('fs');
 
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true);
+    console.log(q.pathname);
     if(q.pathname.substr(-4,4)=='html'){
         var filename = "./Pages/" + q.pathname;
     }

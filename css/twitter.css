@@ -11,7 +11,8 @@ body{
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-rows: 1fr 8vh;
     font-family: "Segoe UI",Arial,sans-serif;
-
+    font-size: 14px;
+    line-height: 20px;
 }
 ul{
     margin: 0 auto;
@@ -32,6 +33,15 @@ a{
     font-size: 12px;
     font-family: "Segoe UI",Arial,sans-serif;
     text-decoration: none;
+}
+h1{
+    font-size: 27px;
+    line-height: 32px;
+}
+h2{
+    font-size: 18px;
+    line-height: 24px;
+    margin: 16px auto;
 }
 a:hover {
     text-decoration: underline;
@@ -60,10 +70,10 @@ footer{
 }
 .Entrance_Login{
     top:20px;
-position: absolute;
+    position: absolute;
 }
 .Entrance_Registration{
-
+    max-width: 350px;
 }
 
 .Information{
@@ -81,11 +91,6 @@ position: absolute;
     justify-content: center;
     align-content: stretch;
     align-items: center;
-}
-.Twitter-bird{
-    height: 140vh;
-    right: -80vh;
-    top: -20vh;
 }
 .Information-item{
     display: flex;
@@ -123,6 +128,26 @@ position: absolute;
 }
 .comment::before{
     content: "\f151";
+}
+.bird::before{
+    color: #1da1f2;
+    font-size: 45px;
+    margin-bottom: 8px;
+    content: "\f179";
+}
+.divIcon{
+    margin: 16px auto;
+}
+.registration_input{
+    width: 210px;
+}
+.registration_span{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.registration_span:before{
+    content: "\f045";
 }
 .button{
     margin-top: 12px;

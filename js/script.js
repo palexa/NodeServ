@@ -1,3 +1,4 @@
+var jquery=require('jquery-3.3.1');
 function Model() {
 
     this.include=function(url) {
