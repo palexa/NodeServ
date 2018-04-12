@@ -139,12 +139,15 @@ footer{
     margin: 16px auto;
 }
 .registration_input{
-    width: 210px;
+    padding: 12px;
+
 }
 .registration_span{
     position: absolute;
     right: 0;
     top: 20px;
+    font-size: 14px;
+    color: #e0245e;
 }
 .registration_span:before{
     content: "\f045";
@@ -205,5 +208,20 @@ form{
 .forgot{
     font-size: 14px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.registration{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.registrationInput_button{
+    padding: 6px 16px;
+}
+.registration_button{
+    background: #1da1f2;
+    color: white;
+}
+.registration_button:hover{
+    background: #4283c7;
 }
 
