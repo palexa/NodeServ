@@ -3,6 +3,7 @@
     src: url('../Fonts/edge-icons-Regular.ttf');
 }
 
+/*Elements*/
 body{
     display: grid;
     min-height: 100vh;
@@ -34,18 +35,22 @@ a{
     font-family: "Segoe UI",Arial,sans-serif;
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline;
+}
 h1{
     font-size: 27px;
     line-height: 32px;
+    margin: 0;
 }
 h2{
     font-size: 18px;
     line-height: 24px;
     margin: 16px auto;
 }
-a:hover {
-    text-decoration: underline;
- }
+form{
+    display: flex;
+}
 footer{
     line-height: 20px;
     display: flex;
@@ -58,21 +63,25 @@ footer{
     border-top: 1px solid #e6ecf0;
 
 }
+
+
+/*Classes*/
 .Entrance{
     grid-row: 1;
     grid-column: 2;
     background: white;
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
     position: relative;
     justify-content: center;
 }
-.Entrance_Login{
+
+.Entrance__Login{
     top:20px;
     position: absolute;
 }
-.Entrance_Registration{
+.Entrance__Registration{
     max-width: 350px;
 }
 
@@ -84,7 +93,6 @@ footer{
     background-size: 170vh;
     background-position-y: -20vh;
     background-position-x: 2vw;
-
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -110,48 +118,40 @@ footer{
 
 
 .icon{
-    display: inline-block;
+    font-family: "MaterialDesign";
+
+}
+.informationIcon{
+    /*vertical-align: baseline;*/
+    /*position: relative;*/
+    /*display: inline-block;*/
     margin-right: 16px;
     font-size: 35px;
     font-weight: normal;
-    font-style: normal;
-    text-align: center;
-    font-family: "MaterialDesign";
-    vertical-align: baseline;
-    position: relative;
+    /*font-style: normal;*/
+    /*text-align: center;*/
 }
-.people::before{
-    content: "\f178";
-}
-.search::before{
-    content: "\f058";
-}
-.comment::before{
-    content: "\f151";
-}
-.bird::before{
+.registrationIcon{
     color: #1da1f2;
     font-size: 45px;
     margin-bottom: 8px;
+}
+.peopleIcon::before{
+    content: "\f178";
+}
+.searchIcon::before{
+    content: "\f058";
+}
+.commentIcon::before{
+    content: "\f151";
+}
+.birdIcon::before{
     content: "\f179";
 }
 .divIcon{
     margin: 16px auto;
 }
-.registration_input{
-    padding: 12px;
 
-}
-.registration_span{
-    position: absolute;
-    right: 0;
-    top: 20px;
-    font-size: 14px;
-    color: #e0245e;
-}
-.registration_span:before{
-    content: "\f045";
-}
 .button{
     margin-top: 12px;
     height: 100%;
@@ -162,10 +162,17 @@ footer{
     text-align: center;
     outline: none;
     border-radius: 100px;
+    align-content: center;
+    border: 1px #41b5f4 solid;
+}
+.entryButton{
     background: white;
     color: #41b5f4;
-    border: 1px #41b5f4 solid;
-    align-content: center;
+
+}
+.registrationButton{
+    background: #1da1f2;
+    color: white;
 }
 .button:hover {
     background: rgba(103, 190, 234,0.3);
@@ -182,9 +189,7 @@ footer{
     color: white;
     transition: background .7s;
 }
-form{
-    display: flex;
-}
+
 .input{
     width: 100%;
     margin-top: 12px;
@@ -207,21 +212,17 @@ form{
 }
 .forgot{
     font-size: 14px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
 }
 .registration{
-    width: 100%;
+    width: 350px;
     display: flex;
     flex-direction: column;
 }
 .registrationInput_button{
     padding: 6px 16px;
 }
-.registration_button{
-    background: #1da1f2;
-    color: white;
-}
-.registration_button:hover{
+.registrationButton:hover{
     background: #4283c7;
 }
 
