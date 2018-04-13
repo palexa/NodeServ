@@ -1,7 +1,31 @@
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
+var express=require('express');
+var app=new express();
+var productRouter = express.Router();
+productRouter.route("/")
+    .get(function(request, response){
 
+        response.send("Список товаров");
+    });
+productRouter.route("/:id")
+    .get(function(request, response){
+console.log(request.params.id);
+        response.send('Товар '+request.params.id);
+    });
+app.use("/products", productRouter);
+
+app.get("/", function(request, response){
+
+    response.send("Главная страница");
+});
+
+app.listen(3000);
+
+
+
+/*
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true);
     console.log(q.pathname);
@@ -28,3 +52,4 @@ http.createServer(function (req, res) {
         return res.end();
     });
 }).listen(9090);
+*/
