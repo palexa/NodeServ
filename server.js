@@ -1,26 +1,39 @@
-var http = require('http');
-var url = require('url');
-var fs = require('fs');
-var express=require('express');
-var app=new express();
-var productRouter = express.Router();
-productRouter.route("/")
-    .get(function(request, response){
+// var http = require('http');
+// var url = require('url');
+// var fs = require('fs');
+// var express=require('express');
+// var app=new express();
+//
+// app.use("/static", express.static(__dirname + "/public"));
+//
+// app.get("/", function(request, response){
+//
+//     response.send("<h1>Главная страница</h1>");
+// });
+// app.get("/contact", function(request, response){
+//
+//     response.send("<h1>Контакты</h1>");
+// });
+// app.listen(3000);
+var express = require("express");
+var bodyParser = require("body-parser");
 
-        response.send("Список товаров");
-    });
-productRouter.route("/:id")
-    .get(function(request, response){
-console.log(request.params.id);
-        response.send('Товар '+request.params.id);
-    });
-app.use("/products", productRouter);
+var app = express();
 
-app.get("/", function(request, response){
+// создаем парсер для данных application/x-www-form-urlencoded
+var urlencodedParser = bodyParser.urlencoded({extended: false});
 
-    response.send("Главная страница");
+app.use(express.static(__dirname + "/Pages"));
+
+app.post("/register", urlencodedParser, function (request, response) {
+    if(!request.body) return response.sendStatus(400);
+    console.log(request.body);
+    response.send(`${request.body.userName} - ${request.body.userAge}`);
 });
 
+app.get("/", function(request, response){
+    response.send("<h1>Главная страница</h1>");
+});
 app.listen(3000);
 
 
