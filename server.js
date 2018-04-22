@@ -21,14 +21,14 @@ var bodyParser = require("body-parser");
 var app = express();
 
 // создаем парсер для данных application/x-www-form-urlencoded
-var urlencodedParser = bodyParser.urlencoded({extended: false});
+var urlencodedParser = bodyParser.json({extended: false});
 
 app.use(express.static(__dirname + "/Pages"));
 
-app.post("/register", urlencodedParser, function (request, response) {
+app.post("/user", urlencodedParser, function (request, response) {
     if(!request.body) return response.sendStatus(400);
     console.log(request.body);
-    response.send(`${request.body.userName} - ${request.body.userAge}`);
+    response.json(`${request.body.userName} - ${request.body.userAge}`);
 });
 
 app.get("/", function(request, response){
