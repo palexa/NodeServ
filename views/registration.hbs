@@ -2,40 +2,256 @@
 <head>
     <link href="../Icons/Twitt.ico" rel="shortcut icon" type="image/x-icon"/>
     <meta charset="UTF-8">
-    <link href="../css/twitter2.css" rel="stylesheet" type="text/css" >
+    <style>
+        @font-face {
+            font-family: 'MaterialDesign';
+            src: url('../fonts/materialdesignicons-webfont.ttf');
+        }
+
+        /*Elements*/
+        body{
+            display: grid;
+            min-height: 100vh;
+            margin: 0 0 0 0;
+            overflow-y: scroll;
+            grid-template-rows: 1fr 8vh;
+            font-family: "Segoe UI",Arial,sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        ul{
+            margin: 0 auto;
+            text-align: center;
+            list-style: none;
+            padding: 0;
+            display: table;
+
+
+        }
+        li{
+            display: inline-block;
+            padding: 0 9px 0 9px;
+
+        }
+        a{
+            color: #aab8c2;
+            font-size: 12px;
+            font-family: "Segoe UI",Arial,sans-serif;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1{
+            font-size: 27px;
+            line-height: 32px;
+            margin: 0;
+        }
+        h2{
+            font-size: 18px;
+            line-height: 24px;
+            margin: 16px auto;
+        }
+        form{
+            display: flex;
+        }
+        footer{
+            line-height: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            grid-row: 2;
+            background: white;
+            padding: 11px 2vw 9px 2vw;
+            border-top: 1px solid #e6ecf0;
+
+        }
+
+
+        /*Classes*/
+        .Entrance{
+            grid-row: 1;
+            background: white;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+        }
+
+        .Entrance__Login{
+            top:20px;
+            position: absolute;
+        }
+        .Entrance__Registration{
+            max-width: 350px;
+        }
+
+        .Information{
+            grid-row: 1;
+            grid-column: 1 ;
+            background-color: #1da1f2;
+            background-image: url("../img/2.jpg");
+            background-size: 200vh;
+            /*background-position-y: -20vh;*/
+            /*background-position-x: 2vw;*/
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-content: stretch;
+            align-items: center;
+        }
+        .Information-item{
+            display: flex;
+            font-family: "Segoe UI",Arial,sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 24px;
+            margin: 48px 0;
+            margin-left: 16px;
+            color: white;
+        }
+        .Copyright{
+            color: #aab8c2;
+            font-size: 12px;
+            font-family: "Segoe UI",Arial,sans-serif;
+        }
+
+
+        .icon{
+            font-family: "MaterialDesign";
+
+        }
+        .informationIcon{
+            /*vertical-align: baseline;*/
+            /*position: relative;*/
+            /*display: inline-block;*/
+            margin-right: 16px;
+            font-size: 35px;
+            font-weight: normal;
+
+            /*font-style: normal;*/
+            /*text-align: center;*/
+        }
+        .registrationIcon{
+            color: #2ec730;
+            font-size: 45px;
+            margin-bottom: 8px;
+        }
+        .peopleIcon::before{
+            content: "\f525";
+        }
+        .searchIcon::before{
+            content: "\f4cf";
+        }
+        .commentIcon::before{
+            content: "\f0e3";
+        }
+        .birdIcon::before{
+            content: "\f3da";
+        }
+        .divIcon{
+            margin: 16px auto;
+        }
+
+        .button{
+            margin-top: 12px;
+            height: 100%;
+            display: inline-block;
+            line-height: 20px;
+            padding: 12px;
+            font-size: 14px;
+            text-align: center;
+            outline: none;
+            border-radius: 100px;
+            align-content: center;
+            border: 1px #2aa32c solid;
+        }
+        .entryButton{
+            background: white;
+            color: #2aa32c;
+
+        }
+        .registrationButton{
+            background: #2ec730;
+            color: white;
+        }
+        .button:hover {
+            background: rgba(74, 217, 76,0.3);
+            cursor: pointer;
+            transition: background .5s;
+        }
+        .button:active {
+            text-align: center;
+            border: 1px solid #2ec730;
+            box-shadow:
+                    0 0 0 2px white,
+                    0 0 0 4px #2ec730;
+            background: #24bd26;
+            color: white;
+            transition: background .7s;
+        }
+
+        .input{
+            width: 100%;
+            margin-top: 12px;
+            line-height: 20px;
+            font-size: 14px;
+            padding: 12px;
+            border: #e6ecf0 1px solid;
+            border-radius: 3px;
+            background: #f9f8ac;
+        }
+        .input:focus {
+            border-radius: 5px;
+            color: #000000;
+            outline:none;
+            border: 1px solid green;
+        }
+        .inputDiv{
+            width: 100%;
+            margin-right: 12px;
+        }
+        .forgot{
+            font-size: 14px;
+            /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+        }
+        .registration{
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+        .registrationInput_button{
+            padding: 6px 16px;
+        }
+        .registrationButton:hover{
+            background: #2aa32c;
+        }
+
+
+    </style>
 
 </head>
 <body>
 <div class="Entrance">
-    <div class="Entrance__Login">
-        <form>
+    <div>
+        <h1 style="margin-bottom: 50px">Давайте поскорее начнём.</h1>
+            <div class="inputDiv">
+                <input type="text" class="input" placeholder="Имя и Фамилия">
+             </div>
             <div class="inputDiv">
                 <input type="email" class="input" value="palexei98@gmail.com">
             </div>
             <div class="inputDiv">
                 <input type="password" class="input">
-                <a href="#" class="forgot">Забыли пароль?</a>
             </div>
-            <input type="submit" value="Войти" class="button entryButton">
-        </form>
+        <div class="registration">
+            <input onclick="window.location='/index'"  type="submit"  class="button registrationInput_button registrationButton" value="Регистрация">
+        </div>
     </div>
     <div class="Entrance_Registration">
-        <div class="divIcon">
-            <span class="icon registrationIcon birdIcon"></span>
-        </div>
-        <h1 style="margin-bottom: 50px">Узнайте, что рисуют <br>в мире прямо сейчас.</h1>
-        <h2>Присоединяйтесь к Maler прямо <br>сейчас!</h2>
-        <div class="registration">
-            <input  type="submit"  class="button registrationInput_button registrationButton" value="Регистрация">
-            <input  type="submit"  class="button registrationInput_button entryButton" value="Войти">
-        </div>
-    </div>
-</div>
-<div class="Information">
-    <div class="Information_Text">
-        <div class="Information-item"><span class="icon informationIcon searchIcon"></span>Любуйтесь тем что вам интересно.</div>
-        <div class="Information-item"><span class="icon informationIcon peopleIcon"></span>Учитесь рисовать по новому.</div>
-        <div class="Information-item"><span class="icon informationIcon commentIcon"></span> Создавайте шедевры.</div>
+
     </div>
 </div>
 <footer>
@@ -45,5 +261,27 @@
         <li class="Copyright">© Maler, 2018</li>
     </ul>
 </footer>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+   /* $("form").submit(function(e) {
+
+        e.preventDefault();
+        var registerForm = document.forms["registerForm"];
+        var userName = registerForm.elements["userName"].value;
+        var userAge = registerForm.elements["userAge"].value;
+
+        $.ajax({
+            type: "POST",
+            url: "/user",
+            data: JSON.stringify({userName: userName, userAge: userAge}),
+            dataType: "json",
+            contentType: "application/json",
+            success: function(data){
+                console.log(data);
+            },
+        });
+    });*/
+</script>
 </body>
+
 </html>

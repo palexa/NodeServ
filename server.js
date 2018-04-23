@@ -17,13 +17,11 @@ app.get("/index",function (req,res) {
         number:"First"
     });
 });
-app.get("/index2",function (req,res) {
-    res.render("index2.hbs",{
-        number:"Second"
-    });
+app.get("/registration",function (req,res) {
+    res.render("registration.hbs");
 });
-app.get("/Registration",function (req,res) {
-    res.render("registration.hbs")
+app.get("/",function (req,res) {
+    res.render("StartPage.hbs")
 });
 // получение списка данных
 /*
