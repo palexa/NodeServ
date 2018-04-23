@@ -4,9 +4,29 @@ var fs = require("fs");
 
 var app = express();
 var jsonParser = bodyParser.json();
+var hbs=require("hbs");
 
 app.use(express.static(__dirname + "/static"));
+app.set("view engine", "hbs");
+hbs.registerPartials(__dirname + "/views/partials");
+app.get("/contact",function (req,res) {
+    res.render("home.hbs")
+});
+app.get("/index",function (req,res) {
+    res.render("index.hbs",{
+        number:"First"
+    });
+});
+app.get("/index2",function (req,res) {
+    res.render("index2.hbs",{
+        number:"Second"
+    });
+});
+app.get("/Registration",function (req,res) {
+    res.render("registration.hbs")
+});
 // получение списка данных
+/*
 app.get("/api/users", function(req, res){
 
     var content = fs.readFileSync("users.json", "utf8");
@@ -116,7 +136,7 @@ app.put("/api/users", jsonParser, function(req, res){
         res.status(404).send(user);
     }
 });
-
+*/
 app.listen(3000, function(){
     console.log("Сервер ожидает подключения...");
 });
