@@ -119,17 +119,11 @@ footer{
 
 .icon{
     font-family: "MaterialDesign";
-
 }
 .informationIcon{
-    /*vertical-align: baseline;*/
-    /*position: relative;*/
-    /*display: inline-block;*/
     margin-right: 16px;
     font-size: 35px;
     font-weight: normal;
-    /*font-style: normal;*/
-    /*text-align: center;*/
 }
 .registrationIcon{
     color: #1da1f2;

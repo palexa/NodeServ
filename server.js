@@ -23,6 +23,12 @@ app.get("/registration",function (req,res) {
 app.get("/",function (req,res) {
     res.render("StartPage.hbs")
 });
+app.get("/index2",function (req,res) {
+    res.render("index2.hbs")
+});
+app.get("/galery",function (req,res) {
+    res.render("galery.hbs")
+});
 // получение списка данных
 /*
 app.get("/api/users", function(req, res){

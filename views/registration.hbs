@@ -3,11 +3,6 @@
     <link href="../Icons/Twitt.ico" rel="shortcut icon" type="image/x-icon"/>
     <meta charset="UTF-8">
     <style>
-        @font-face {
-            font-family: 'MaterialDesign';
-            src: url('../fonts/materialdesignicons-webfont.ttf');
-        }
-
         /*Elements*/
         body{
             display: grid;
@@ -79,39 +74,7 @@
             justify-content: center;
         }
 
-        .Entrance__Login{
-            top:20px;
-            position: absolute;
-        }
-        .Entrance__Registration{
-            max-width: 350px;
-        }
 
-        .Information{
-            grid-row: 1;
-            grid-column: 1 ;
-            background-color: #1da1f2;
-            background-image: url("../img/2.jpg");
-            background-size: 200vh;
-            /*background-position-y: -20vh;*/
-            /*background-position-x: 2vw;*/
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-content: stretch;
-            align-items: center;
-        }
-        .Information-item{
-            display: flex;
-            font-family: "Segoe UI",Arial,sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 24px;
-            margin: 48px 0;
-            margin-left: 16px;
-            color: white;
-        }
         .Copyright{
             color: #aab8c2;
             font-size: 12px;
@@ -119,48 +82,12 @@
         }
 
 
-        .icon{
-            font-family: "MaterialDesign";
-
-        }
-        .informationIcon{
-            /*vertical-align: baseline;*/
-            /*position: relative;*/
-            /*display: inline-block;*/
-            margin-right: 16px;
-            font-size: 35px;
-            font-weight: normal;
-
-            /*font-style: normal;*/
-            /*text-align: center;*/
-        }
-        .registrationIcon{
-            color: #2ec730;
-            font-size: 45px;
-            margin-bottom: 8px;
-        }
-        .peopleIcon::before{
-            content: "\f525";
-        }
-        .searchIcon::before{
-            content: "\f4cf";
-        }
-        .commentIcon::before{
-            content: "\f0e3";
-        }
-        .birdIcon::before{
-            content: "\f3da";
-        }
-        .divIcon{
-            margin: 16px auto;
-        }
-
         .button{
             margin-top: 12px;
             height: 100%;
             display: inline-block;
             line-height: 20px;
-            padding: 12px;
+            padding: 20px;
             font-size: 14px;
             text-align: center;
             outline: none;
@@ -168,11 +95,7 @@
             align-content: center;
             border: 1px #2aa32c solid;
         }
-        .entryButton{
-            background: white;
-            color: #2aa32c;
 
-        }
         .registrationButton{
             background: #2ec730;
             color: white;
@@ -213,17 +136,13 @@
             width: 100%;
             margin-right: 12px;
         }
-        .forgot{
-            font-size: 14px;
-            /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
-        }
         .registration{
             width: 350px;
             display: flex;
             flex-direction: column;
         }
         .registrationInput_button{
-            padding: 6px 16px;
+            padding: 15px 20px;
         }
         .registrationButton:hover{
             background: #2aa32c;

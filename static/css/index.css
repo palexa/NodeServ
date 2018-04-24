@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'MaterialDesign';
+    src: url('../fonts/materialdesignicons-webfont.ttf');
+}
+
 html {
     font-size: 62.5%;
     font-family: serif;
@@ -67,8 +72,10 @@ header, footer {
     font-size: large;
     text-align: center;
     padding: 0 0;
-    background-color: #4a4a4a;
     color: #f9f9f9;
+}
+footer{
+    background: linear-gradient(to right, #32bc39,#2a85a0);
 }
 nav {
     background: #eee;
@@ -107,6 +114,7 @@ main {
     padding: 0 20px;
     height: 85vh;
     background-image: url(../img/house.jpg);
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -146,9 +154,28 @@ footer {
 }
 .menu-item{
     border-bottom: green solid;
+    color: black;
 }
 .Home{
 
+}
+.icon{
+    font-family: "MaterialDesign";
+}
+.informationIcon{
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 55px;
+    font-weight: normal;
+}
+.twitterIcon::before{
+    content: "\f545";
+}
+.facebookIcon::before{
+    content: "\f20d";
+}
+.gmailIcon::before{
+    content: "\f2ab";
 }
 #logo{
 padding-top: 1vh;
@@ -163,5 +190,31 @@ padding-top: 1vh;
 #menu-item_border{
     border-bottom: white solid;
     cursor: pointer;
+}
+
+.search {
+    margin-top: 30px;
+    line-height: 20px;
+    font-size: 14px;
+    padding: 12px;
+    border: #e6ecf0 1px solid;
+    border-radius: 3px;
+    background: #88eb8a;
+    cursor: pointer;
+    width: 100px;
+    transition-duration: 0.4s;
+}
+
+.search:focus {
+    cursor: text;
+    width: 200px;
+    border-radius: 5px;
+    color: #000000;
+    outline:none;
+    border: 1px solid green;
+    background-position: right 10px center;
+    text-indent: 0;
+    white-space: normal;
+
 }
 
