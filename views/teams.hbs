@@ -1,0 +1,26 @@
+<html lang="en"><!--для русского надо указать ru к этому тегу или абзацу текста-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../Icons/favicon.ico" />
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <title>Start</title>
+</head>
+<body >
+{{> header}}
+
+{{> footer}}
+<script>
+
+    $('div.menu-item').hover(function () {
+        this.id='menu-item_border';
+    },function () {
+        this.id='';
+    });
+    $('div.down').click(function () {
+        $(this).hide(1000);
+    });
+</script>
+</body>
+</html>

@@ -1,3 +1,4 @@
+var phrases=require('./ru');
 var express = require("express");
 var bodyParser = require("body-parser");
 var fs = require("fs");
@@ -9,26 +10,99 @@ var hbs=require("hbs");
 app.use(express.static(__dirname + "/static"));
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");
-app.get("/contact",function (req,res) {
-    res.render("home.hbs")
-});
+
 app.get("/index",function (req,res) {
     res.render("index.hbs",{
-        number:"First"
+        page:phrases.Home,
+        Home:phrases.Home,
+        Blog:phrases.Blog,
+        Board:phrases.Board,
+        Teams:phrases.Teams,
+        Dravings:phrases.Dravings,
+        Galery:phrases.Galery,
+        Settings:phrases.Settings
     });
 });
+app.get("/blog",function (req,res) {
+    res.render("blog.hbs",{
+        page:phrases.Blog,
+        Home:phrases.Home,
+        Blog:phrases.Blog,
+        Board:phrases.Board,
+        Teams:phrases.Teams,
+        Dravings:phrases.Dravings,
+        Galery:phrases.Galery,
+        Settings:phrases.Settings
+    })
+});
+app.get("/galery",function (req,res) {
+    res.render("galery.hbs",{
+        page:phrases.Galery,
+        Home:phrases.Home,
+        Blog:phrases.Blog,
+        Board:phrases.Board,
+        Teams:phrases.Teams,
+        Dravings:phrases.Dravings,
+        Galery:phrases.Galery,
+        Settings:phrases.Settings
+    })
+});
+app.get("/board",function (req,res) {
+    res.render("board.hbs",{
+        page:phrases.Board,
+        Home:phrases.Home,
+        Blog:phrases.Blog,
+        Board:phrases.Board,
+        Teams:phrases.Teams,
+        Dravings:phrases.Dravings,
+        Galery:phrases.Galery,
+        Settings:phrases.Settings
+    })
+});
+app.get("/teams",function (req,res) {
+    res.render("teams.hbs",{
+        page:phrases.Teams,
+        Home:phrases.Home,
+        Blog:phrases.Blog,
+        Board:phrases.Board,
+        Teams:phrases.Teams,
+        Dravings:phrases.Dravings,
+        Galery:phrases.Galery,
+        Settings:phrases.Settings
+    })
+});
+app.get("/dravings",function (req,res) {
+    res.render("dravings.hbs",{
+        page:phrases.Dravings,
+        Home:phrases.Home,
+        Blog:phrases.Blog,
+        Board:phrases.Board,
+        Teams:phrases.Teams,
+        Dravings:phrases.Dravings,
+        Galery:phrases.Galery,
+        Settings:phrases.Settings
+    })
+});
+app.get("/settings",function (req,res) {
+    res.render("settings.hbs",{
+        page:phrases.Settings,
+        Home:phrases.Home,
+        Blog:phrases.Blog,
+        Board:phrases.Board,
+        Teams:phrases.Teams,
+        Dravings:phrases.Dravings,
+        Galery:phrases.Galery,
+        Settings:phrases.Settings
+    })
+});
+
 app.get("/registration",function (req,res) {
     res.render("registration.hbs");
 });
 app.get("/",function (req,res) {
     res.render("StartPage.hbs")
 });
-app.get("/index2",function (req,res) {
-    res.render("index2.hbs")
-});
-app.get("/galery",function (req,res) {
-    res.render("galery.hbs")
-});
+
 // получение списка данных
 /*
 app.get("/api/users", function(req, res){

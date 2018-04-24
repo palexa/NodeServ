@@ -91,7 +91,7 @@ aside {
 body {
     display: grid;
     min-height: 100vh;
-    grid-template-columns: 200px 1fr 150px;
+    grid-template-columns: 200px 1fr 30px;
     grid-template-rows: min-content 1fr min-content;
 }
 nav,main,aside{
@@ -126,7 +126,7 @@ aside {
 
 }
 footer {
-    grid-row: 5;
+    grid-row: 3;
     grid-column: 1 / 4;
 }
 #menu-container {
@@ -217,4 +217,71 @@ padding-top: 1vh;
     white-space: normal;
 
 }
+/*Доска для рисования*/
+.board{
+    grid-row: 2;
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    background-color: white;
+}
+/*canvas{*/
+    /*background: white;*/
+    /*width: 80%;*/
+    /*height: 100%;*/
+/*}*/
 
+.Toolbar {
+    float: left;
+    font-family: 'Trebuchet MS';
+    font-size: 14px;
+    font-variant: small-caps;
+    text-align: center;
+    background: #F2F7FE;
+    padding: 10px 15px 3px 10px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    border: 1px solid #7B899B;
+}
+
+.Toolbar button {
+    padding: 6px;
+    margin: 7px 2px;
+    font-variant: normal;
+    font-size: 12px;
+}
+
+.CanvasContainer {
+    clear: both;
+}
+
+canvas {
+    border: 1px solid #7B899B;
+}
+
+img {
+    padding: 2px;
+    border: 2px solid #F2F7FE;
+}
+
+img:hover {
+    border: 2px groove #E4F0FE;
+    background: white;
+}
+
+
+img.Selected {
+    border: 2px groove #E4F0FE;
+}
+
+#savedCopyContainer {
+    display: none;
+}
+
+#savedCopyContainer img {
+    width: 250px;
+    height: 150px;
+}

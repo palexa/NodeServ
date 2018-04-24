@@ -9,10 +9,11 @@
             min-height: 100vh;
             margin: 0 0 0 0;
             overflow-y: scroll;
-            grid-template-rows: 1fr 8vh;
+            grid-template-rows: 1fr;
             font-family: "Segoe UI",Arial,sans-serif;
             font-size: 14px;
             line-height: 20px;
+
         }
         ul{
             margin: 0 auto;
@@ -66,12 +67,15 @@
         /*Classes*/
         .Entrance{
             grid-row: 1;
-            background: white;
             align-items: center;
             display: flex;
             flex-direction: column;
             position: relative;
             justify-content: center;
+            background-color: black;
+            background-image: url("../img/registration.png");
+            background-size: 100vw;
+
         }
 
 
@@ -93,15 +97,15 @@
             outline: none;
             border-radius: 100px;
             align-content: center;
-            border: 1px #2aa32c solid;
+            border: 1px #3e873f solid;
         }
 
         .registrationButton{
-            background: #2ec730;
+            background: #3e873f;
             color: white;
         }
         .button:hover {
-            background: rgba(74, 217, 76,0.3);
+            background: #3e873f;
             cursor: pointer;
             transition: background .5s;
         }
@@ -109,8 +113,8 @@
             text-align: center;
             border: 1px solid #2ec730;
             box-shadow:
-                    0 0 0 2px white,
-                    0 0 0 4px #2ec730;
+                    0 0 0 2px black,
+                    0 0 0 4px #3e873f;
             background: #24bd26;
             color: white;
             transition: background .7s;
@@ -145,7 +149,7 @@
             padding: 15px 20px;
         }
         .registrationButton:hover{
-            background: #2aa32c;
+            background: #2e6e2f;
         }
 
 
@@ -155,31 +159,24 @@
 <body>
 <div class="Entrance">
     <div>
-        <h1 style="margin-bottom: 50px">Давайте поскорее начнём.</h1>
+        <h1 style="margin-bottom: 50px; color: #3e873f ">Давайте поскорее начнём.</h1>
             <div class="inputDiv">
                 <input type="text" class="input" placeholder="Имя и Фамилия">
              </div>
             <div class="inputDiv">
-                <input type="email" class="input" value="palexei98@gmail.com">
+                <input type="email" class="input" placeholder="Адрес электронной почты" >
             </div>
             <div class="inputDiv">
-                <input type="password" class="input">
+                <input type="password" class="input" placeholder="Пароль">
+            </div>
+            <div class="inputDiv">
+                <input type="password" class="input" placeholder="Повторите пароль">
             </div>
         <div class="registration">
             <input onclick="window.location='/index'"  type="submit"  class="button registrationInput_button registrationButton" value="Регистрация">
         </div>
     </div>
-    <div class="Entrance_Registration">
-
-    </div>
 </div>
-<footer>
-    <ul>
-        <li><a href="#">О нас</a></li>
-        <li><a href="#">Справочный центр</a></li>
-        <li class="Copyright">© Maler, 2018</li>
-    </ul>
-</footer>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
    /* $("form").submit(function(e) {

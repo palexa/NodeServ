@@ -1,6 +1,6 @@
 <header>
     <div id="container">
-    <div><h3 style="color: black">Maler</h3></div>
+    <div><h3 style="color: black">Maler:{{page}}</h3></div>
     <div id="contact-container">
         <form >
             <input type="search" name="search" placeholder="Search.." class="search"></form>
@@ -11,14 +11,14 @@
         </div>
     </div>
 </div>
+    <hr color="#3d423d" style="margin: 0">
 <div id="menu-container">
-    <div class="menu-item Home" onClick="window.location='/index'"><h6>Главная</h6></div>
-    <div class="menu-item About"><h6>About us</h6></div>
-    <div class="menu-item Services"><h6>Services</h6></div>
-    <div class="menu-item Team"><h6>Our team</h6></div>
-    <div class="menu-item Departments"><h6>Departments</h6></div>
-    <div class="menu-item" onClick="window.location='/galery'"><h6>Gallery</h6></div>
-    <div class="menu-item" onClick="window.location='/index2'"><h6>Blog</h6></div>
-    <div class="menu-item"><h6>Contact</h6></div>
+    <div class="menu-item Home" onClick="window.location='/index'"><h6>{{Home}}</h6></div>
+    <div class="menu-item About" onClick="window.location='/board'"><h6>{{Board}}</h6></div>
+    <div class="menu-item Services" onClick="window.location='/teams'"><h6>{{Teams}}</h6></div>
+    <div class="menu-item Departments" onClick="window.location='/dravings'"><h6>{{Dravings}}</h6></div>
+    <div class="menu-item" onClick="window.location='/galery'"><h6>{{Galery}}</h6></div>
+    <div class="menu-item" onClick="window.location='/blog'"><h6>{{Blog}}</h6></div>
+    <div class="menu-item" onClick="window.location='/settings'"><h6>{{Settings}}</h6></div>
 </div>
 </header>

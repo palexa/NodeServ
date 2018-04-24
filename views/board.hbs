@@ -1,0 +1,70 @@
+<html lang="en"><!--для русского надо указать ru к этому тегу или абзацу текста-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../icons/favicon.ico" />
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery-3.3.1.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <title>Board</title>
+</head>
+<body >
+{{> header}}
+
+    <div class="board" id="board">
+        <canvas width="900" height="400" id="drawingCanvas">
+        </canvas>
+    </div>
+
+
+{{> footer}}
+<script>
+    canvas = document.getElementById("drawingCanvas");
+context = canvas.getContext("2d");
+    context.lineWidth=3;
+    context.strokeStyle = "green";
+    var block=document.getElementById("board");
+    var isDrawing;
+// Подключаем требуемые для рисования события
+canvas.onmousedown = startDrawing;
+canvas.onmouseup = stopDrawing;
+canvas.onmouseout = stopDrawing;
+canvas.onmousemove = draw;
+    function startDrawing(e) {
+        // Начинаем рисовать
+        isDrawing = true;
+
+        // Создаем новый путь (с текущим цветом и толщиной линии)
+        context.beginPath();
+
+        // Нажатием левой кнопки мыши помещаем "кисть" на холст
+        context.moveTo(e.pageX - canvas.offsetLeft, e.pageY - canvas.offsetTop - block.offsetTop);
+    }
+    function draw(e) {
+        if (isDrawing == true)
+        {
+            // Определяем текущие координаты указателя мыши
+            var x = e.pageX - canvas.offsetLeft ;
+            var y = e.pageY - canvas.offsetTop - block.offsetTop;
+
+            // Рисуем линию до новой координаты
+            context.lineTo(x, y);
+            context.stroke();
+        }
+    }
+    function stopDrawing() {
+        isDrawing = false;
+    }
+</script>
+<script>
+
+    $('div.menu-item').hover(function () {
+        this.id='menu-item_border';
+    },function () {
+        this.id='';
+    });
+    $('div.down').click(function () {
+        $(this).hide(1000);
+    });
+</script>
+</body>
+</html>
